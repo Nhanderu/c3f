@@ -2,6 +2,14 @@
 
 Just studying how to make an app with ReasonML and React Native.
 
+## Roadmap
+
+- [ ] `v0.1.0`: working version as a React web app
+- [ ] `v0.2.0`: working version as a React Native mobile app
+- [ ] `v0.3.0`: locally persisting values feature
+- [ ] `v1.0.0`: refactor, test, build and ship for both platforms
+- [ ] `v1.0.1`: use ReasonML
+
 ## License
 
 This project code is in the public domain. See the [LICENSE file][1].
