@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 const calculate = () => {
@@ -11,10 +11,7 @@ const calculate = () => {
   const a = parseInt(document.getElementById(`a-${day}`).value, 10);
   const b = parseInt(document.getElementById(`b-${date}`).value, 10);
   const c = parseInt(document.getElementById(`c-${month}`).value, 10);
-
-  const input = document.getElementById('input').value;
-  const d = parseInt(input.substr(input.length-4), 10);
-
+  const d = parseInt(document.getElementById('d').value.substr(-4), 10);
   document.getElementById('result').innerText = a + b + c + d;
 
 };
@@ -31,13 +28,13 @@ const changePanel = ({ target }) => {
 
 };
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className='container'>
         <div className='calculator'>
           <div className='input'>
-            <input id='input' type='text' />
+            <input id='d' type='text' placeholder="d" />
             <button id='calculate' onClick={calculate}>Calcular</button>
           </div>
           <span id='result'></span>
