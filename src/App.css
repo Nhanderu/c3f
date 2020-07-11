@@ -11,7 +11,7 @@
   height: 20vh;
   width: 100vw;
   text-align: center;
-  background-color: #EE6;
+  background-color: #ee6;
 }
 
 .container > .calculator > .input {
@@ -44,7 +44,89 @@
 
 .container > .values {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   height: 80vh;
   width: 100vw;
   background-color: #222;
+}
+
+.container > .values > .panels-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5vh;
+  width: 100%;
+}
+
+.container > .values > .panels-menu > .panel-button {
+  height: 100%;
+  width: 20vw;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.container > .values > .panels-menu > .panel-button-active {
+  border: 1px solid #ee6;
+  background-color: #ee6;
+  color: black;
+}
+
+.container > .values > .panels {
+  height: 60vh;
+  width: 80vw;
+}
+
+.container > .values > .panels > .panel {
+  display: none;
+}
+
+.container > .values > .panels > .panel-active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.container > .values > .panels label {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.container > .values > .panels input[type="text"] {
+  width: 10vw;
+  border: 1px solid white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+#panel-b .column {
+  justify-content: start;
+}
+
+#panel-b .row {
+  justify-content: space-evenly;
+  margin-bottom: 14px;
 }
