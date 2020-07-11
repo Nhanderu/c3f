@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../index.css';
 
-export default class Input extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className='row'>
-        <label htmlFor={this.props.id}>{this.props.text}</label>
-        <input id={this.props.id} type='text' onChange={this.props.onChange} />
-      </div>
-    );
-  }
-
+export default (props) => {
+  return (
+    <div className='row'>
+      <label htmlFor={props.id}>{props.text}</label>
+      <input id={props.id} type='text' onChange={props.onChange} />
+    </div>
+  );
 }
