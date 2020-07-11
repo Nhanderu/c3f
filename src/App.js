@@ -1,254 +1,267 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 const calculate = () => {
-  const rand = '0000' + parseInt(Math.random() * 10000);
-  document.getElementById("result").innerText = rand.substr(rand.length-4);
+
+  const now = new Date();
+  const day = now.getDay();
+  const date = now.getDate();
+  const month = now.getMonth();
+
+  const a = parseInt(document.getElementById(`a-${day}`).value, 10);
+  const b = parseInt(document.getElementById(`b-${date}`).value, 10);
+  const c = parseInt(document.getElementById(`c-${month}`).value, 10);
+
+  const input = document.getElementById('input').value;
+  const d = parseInt(input.substr(input.length-4), 10);
+
+  document.getElementById('result').innerText = a + b + c + d;
+
 };
 
 const changePanel = ({ target }) => {
 
-  for (const active of document.getElementsByClassName("panel-button-active"))
-    active.classList.remove("panel-button-active");
-  target.classList.add("panel-button-active");
+  for (const active of document.getElementsByClassName('panel-button-active'))
+    active.classList.remove('panel-button-active');
+  target.classList.add('panel-button-active');
 
-  for (const active of document.getElementsByClassName("panel-active"))
-    active.classList.remove("panel-active");
-  document.getElementById(target.getAttribute("data-panel")).classList.add("panel-active");
+  for (const active of document.getElementsByClassName('panel-active'))
+    active.classList.remove('panel-active');
+  document.getElementById(target.getAttribute('data-panel')).classList.add('panel-active');
 
 };
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <div className="calculator">
-          <div className="input">
-            <input id="input" type="text" />
-            <button id="calculate" onClick={calculate}>Calcular</button>
+      <div className='container'>
+        <div className='calculator'>
+          <div className='input'>
+            <input id='input' type='text' />
+            <button id='calculate' onClick={calculate}>Calcular</button>
           </div>
-          <span id="result"></span>
+          <span id='result'></span>
         </div>
-        <div className="values">
-          <div className="panels-menu">
-            <button className="panel-button panel-button-active" data-panel="panel-a" onClick={changePanel}>a</button>
-            <button className="panel-button" data-panel="panel-b" onClick={changePanel}>b</button>
-            <button className="panel-button" data-panel="panel-c" onClick={changePanel}>c</button>
+        <div className='values'>
+          <div className='panels-menu'>
+            <button className='panel-button panel-button-active' data-panel='panel-a' onClick={changePanel}>a</button>
+            <button className='panel-button' data-panel='panel-b' onClick={changePanel}>b</button>
+            <button className='panel-button' data-panel='panel-c' onClick={changePanel}>c</button>
           </div>
-          <div className="panels">
-            <div id="panel-a" className="panel panel-active">
-              <div className="column">
-                <div className="row">
-                  <label for="a-monday">Segunda</label>
-                  <input id="a-monday" type="text" />
+          <div className='panels'>
+            <div id='panel-a' className='panel panel-active'>
+              <div className='column'>
+                <div className='row'>
+                  <label htmlFor='a-1'>Segunda</label>
+                  <input id='a-1' type='text' />
                 </div>
-                <div className="row">
-                  <label for="a-tuesday">Terça</label>
-                  <input id="a-tuesday" type="text" />
+                <div className='row'>
+                  <label htmlFor='a-2'>Terça</label>
+                  <input id='a-2' type='text' />
                 </div>
-                <div className="row">
-                  <label for="a-wednesday">Quarta</label>
-                  <input id="a-wednesday" type="text" />
+                <div className='row'>
+                  <label htmlFor='a-3'>Quarta</label>
+                  <input id='a-3' type='text' />
                 </div>
-                <div className="row">
-                  <label for="a-thursday">Quinta</label>
-                  <input id="a-thursday" type="text" />
+                <div className='row'>
+                  <label htmlFor='a-4'>Quinta</label>
+                  <input id='a-4' type='text' />
                 </div>
-                <div className="row">
-                  <label for="a-friday">Sexta</label>
-                  <input id="a-friday" type="text" />
+                <div className='row'>
+                  <label htmlFor='a-5'>Sexta</label>
+                  <input id='a-5' type='text' />
                 </div>
-                <div className="row">
-                  <label for="a-saturday">Sábado</label>
-                  <input id="a-saturday" type="text" />
+                <div className='row'>
+                  <label htmlFor='a-6'>Sábado</label>
+                  <input id='a-6' type='text' />
                 </div>
-                <div className="row">
-                  <label for="a-sunday">Domingo</label>
-                  <input id="a-sunday" type="text" />
-                </div>
-              </div>
-            </div>
-            <div id="panel-b" className="panel">
-              <div className="column">
-                <div className="row">
-                  <label for="b-01">01</label>
-                  <input id="b-01" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-04">04</label>
-                  <input id="b-04" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-07">07</label>
-                  <input id="b-07" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-10">10</label>
-                  <input id="b-10" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-13">13</label>
-                  <input id="b-13" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-16">16</label>
-                  <input id="b-16" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-19">19</label>
-                  <input id="b-19" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-22">22</label>
-                  <input id="b-22" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-25">25</label>
-                  <input id="b-25" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-28">28</label>
-                  <input id="b-28" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-31">31</label>
-                  <input id="b-31" type="text" />
-                </div>
-              </div>
-              <div className="column">
-                <div className="row">
-                  <label for="b-02">02</label>
-                  <input id="b-02" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-05">05</label>
-                  <input id="b-05" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-08">08</label>
-                  <input id="b-08" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-11">11</label>
-                  <input id="b-11" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-14">14</label>
-                  <input id="b-14" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-17">17</label>
-                  <input id="b-17" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-20">20</label>
-                  <input id="b-20" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-23">23</label>
-                  <input id="b-23" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-26">26</label>
-                  <input id="b-26" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-29">29</label>
-                  <input id="b-29" type="text" />
-                </div>
-              </div>
-              <div className="column">
-                <div className="row">
-                  <label for="b-03">03</label>
-                  <input id="b-03" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-06">06</label>
-                  <input id="b-06" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-09">09</label>
-                  <input id="b-09" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-12">12</label>
-                  <input id="b-12" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-15">15</label>
-                  <input id="b-15" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-18">18</label>
-                  <input id="b-18" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-21">21</label>
-                  <input id="b-21" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-24">24</label>
-                  <input id="b-24" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-27">27</label>
-                  <input id="b-27" type="text" />
-                </div>
-                <div className="row">
-                  <label for="b-30">30</label>
-                  <input id="b-30" type="text" />
+                <div className='row'>
+                  <label htmlFor='a-0'>Domingo</label>
+                  <input id='a-0' type='text' />
                 </div>
               </div>
             </div>
-            <div id="panel-c" className="panel">
-              <div className="column">
-                <div className="row">
-                  <label for="c-january">Janeiro</label>
-                  <input id="c-january" type="text" />
+            <div id='panel-b' className='panel'>
+              <div className='column'>
+                <div className='row'>
+                  <label htmlFor='b-1'>01</label>
+                  <input id='b-1' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-february">Fevereiro</label>
-                  <input id="c-february" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-4'>04</label>
+                  <input id='b-4' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-march">Março</label>
-                  <input id="c-march" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-7'>07</label>
+                  <input id='b-7' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-april">Abril</label>
-                  <input id="c-april" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-10'>10</label>
+                  <input id='b-10' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-may">Maio</label>
-                  <input id="c-may" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-13'>13</label>
+                  <input id='b-13' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-june">Junho</label>
-                  <input id="c-june" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-16'>16</label>
+                  <input id='b-16' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-july">Julho</label>
-                  <input id="c-july" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-19'>19</label>
+                  <input id='b-19' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-august">Agosto</label>
-                  <input id="c-august" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-22'>22</label>
+                  <input id='b-22' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-september">Setembro</label>
-                  <input id="c-september" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-25'>25</label>
+                  <input id='b-25' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-october">Outubro</label>
-                  <input id="c-october" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-28'>28</label>
+                  <input id='b-28' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-november">Novembro</label>
-                  <input id="c-november" type="text" />
+                <div className='row'>
+                  <label htmlFor='b-31'>31</label>
+                  <input id='b-31' type='text' />
                 </div>
-                <div className="row">
-                  <label for="c-december">Dezembro</label>
-                  <input id="c-december" type="text" />
+              </div>
+              <div className='column'>
+                <div className='row'>
+                  <label htmlFor='b-2'>02</label>
+                  <input id='b-2' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-5'>05</label>
+                  <input id='b-5' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-8'>08</label>
+                  <input id='b-8' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-11'>11</label>
+                  <input id='b-11' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-14'>14</label>
+                  <input id='b-14' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-17'>17</label>
+                  <input id='b-17' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-20'>20</label>
+                  <input id='b-20' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-23'>23</label>
+                  <input id='b-23' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-26'>26</label>
+                  <input id='b-26' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-29'>29</label>
+                  <input id='b-29' type='text' />
+                </div>
+              </div>
+              <div className='column'>
+                <div className='row'>
+                  <label htmlFor='b-3'>03</label>
+                  <input id='b-3' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-6'>06</label>
+                  <input id='b-6' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-9'>09</label>
+                  <input id='b-9' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-12'>12</label>
+                  <input id='b-12' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-15'>15</label>
+                  <input id='b-15' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-18'>18</label>
+                  <input id='b-18' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-21'>21</label>
+                  <input id='b-21' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-24'>24</label>
+                  <input id='b-24' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-27'>27</label>
+                  <input id='b-27' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='b-30'>30</label>
+                  <input id='b-30' type='text' />
+                </div>
+              </div>
+            </div>
+            <div id='panel-c' className='panel'>
+              <div className='column'>
+                <div className='row'>
+                  <label htmlFor='c-0'>Janeiro</label>
+                  <input id='c-0' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-1'>Fevereiro</label>
+                  <input id='c-1' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-2'>Março</label>
+                  <input id='c-2' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-3'>Abril</label>
+                  <input id='c-3' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-4'>Maio</label>
+                  <input id='c-4' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-5'>Junho</label>
+                  <input id='c-5' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-6'>Julho</label>
+                  <input id='c-6' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-7'>Agosto</label>
+                  <input id='c-7' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-8'>Setembro</label>
+                  <input id='c-8' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-9'>Outubro</label>
+                  <input id='c-9' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-10'>Novembro</label>
+                  <input id='c-10' type='text' />
+                </div>
+                <div className='row'>
+                  <label htmlFor='c-11'>Dezembro</label>
+                  <input id='c-11' type='text' />
                 </div>
               </div>
             </div>
