@@ -1,6 +1,8 @@
 # Carro Forte
 
-Just studying how to make an app with ReasonML and React Native.
+This app idea was my mom's. Briefly, it helps her with some repetitive calculations.
+
+Since I wanted to study React Native and ReasonML, I began this toy project. Two birds with one stone.
 
 ## Roadmap
 
