@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
+import { StyleSheet, View, Text, TextInput } from 'react-native';
 
 import LabeledInput from '../LabeledInput';
+import Button from '../Button';
 
 const styles = StyleSheet.create({
 
@@ -79,22 +80,23 @@ const styles = StyleSheet.create({
     },
 
     panelButton: {
-        height: 5,
-        width: 10,
+        height: 30,
+        width: 50,
         backgroundColor: 'black',
+        fontSize: 20,
         color: 'white',
-        borderWidth: 1,
-        borderColor: 'white',
         textAlign: 'center',
+        textAlignVertical: 'center',
     },
 
     panelButtonActive: {
-        height: 5,
-        width: 10,
+        height: 30,
+        width: 50,
         backgroundColor: '#ee6',
+        fontSize: 20,
         color: 'black',
-        borderWidth: 1,
-        borderColor: '#ee6',
+        textAlign: 'center',
+        textAlignVertical: 'center',
     },
 
     panelsArea: {
@@ -187,7 +189,7 @@ export default () => {
                 <View style={styles.space} />
                 <View style={styles.inputArea}>
                     <TextInput style={styles.dInput} onChangeText={updateValues('d')} />
-                    <Button style={styles.calculate} title='Calcular' onPress={calculate} />
+                    <Button style={styles.calculate} onPress={calculate}>Calcular</Button>
                 </View>
                 <View style={styles.resultArea}>
                     <Text style={styles.result}>{result}</Text>
@@ -195,9 +197,9 @@ export default () => {
             </View>
             <View style={styles.valuesArea}>
                 <View style={styles.panelsMenu}>
-                    <Button style={dynamicStyles.buttonA} title='a' onPress={changePanel('a')} />
-                    <Button style={dynamicStyles.buttonB} title='b' onPress={changePanel('b')} />
-                    <Button style={dynamicStyles.buttonC} title='c' onPress={changePanel('c')} />
+                    <Button style={dynamicStyles.buttonA} onPress={changePanel('a')}>a</Button>
+                    <Button style={dynamicStyles.buttonB} onPress={changePanel('b')}>b</Button>
+                    <Button style={dynamicStyles.buttonC} onPress={changePanel('c')}>c</Button>
                 </View>
                 <View style={styles.panelsArea}>
                     <View style={dynamicStyles.panelA}>
