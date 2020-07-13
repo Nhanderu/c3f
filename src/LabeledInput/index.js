@@ -1,12 +1,48 @@
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { StyleSheet, View, Text, TextInput } from 'react-native';
 
-export default ({ style, children, onChangeText }) => {
-    console.log(style.input.width)
+const styles = StyleSheet.create({
+
+    row: {
+        flex: 1,
+        alignSelf: 'stretch',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+
+    label: {
+        fontSize: 20,
+        color: 'white',
+    },
+
+    bigInput: {
+        width: 100,
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: 'white',
+        fontSize: 20,
+        textAlign: 'center',
+    },
+
+    smallInput: {
+        width: 50,
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: 'white',
+        fontSize: 20,
+        textAlign: 'center',
+    },
+
+});
+
+export default ({ children, small, onChangeText }) => {
+    const inputStyle = small ? styles.smallInput : styles.bigInput;
     return (
-        <View style={style.row}>
-        <Text style={style.label}>{children}</Text>
-        <TextInput style={style.input} onChangeText={onChangeText} />
+        <View style={styles.row}>
+        <Text style={styles.label}>{children}</Text>
+        <TextInput style={inputStyle} onChangeText={onChangeText} />
         </View>
     );
 }
+

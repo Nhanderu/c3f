@@ -122,37 +122,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 25,
     },
 
-    row: {
-        flex: 1,
-        alignSelf: 'stretch',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    },
-
-    label: {
-        fontSize: 20,
-        color: 'white',
-    },
-
-    bigInput: {
-        width: 100,
-        backgroundColor: 'white',
-        borderWidth: 1,
-        borderColor: 'white',
-        fontSize: 20,
-        textAlign: 'center',
-    },
-
-    smallInput: {
-        width: 50,
-        backgroundColor: 'white',
-        borderWidth: 1,
-        borderColor: 'white',
-        fontSize: 20,
-        textAlign: 'center',
-    },
-
 })
 
 export default () => {
@@ -233,70 +202,70 @@ export default () => {
                 <View style={styles.panelsArea}>
                     <View style={dynamicStyles.panelA}>
                         <View style={styles.column}>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-1')}>Segunda</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-2')}>Terça</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-3')}>Quarta</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-4')}>Quinta</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-5')}>Sexta</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-6')}>Sábado</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('a-0')}>Domingo</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-1')}>Segunda</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-2')}>Terça</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-3')}>Quarta</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-4')}>Quinta</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-5')}>Sexta</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-6')}>Sábado</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('a-0')}>Domingo</LabeledInput>
                         </View>
                     </View>
                     <View id='panel-b' style={dynamicStyles.panelB}>
                         <View style={styles.column}>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-1')}>01</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-4')}>04</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-7')}>07</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-10')}>10</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-13')}>13</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-16')}>16</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-19')}>19</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-22')}>22</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-25')}>25</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-28')}>28</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-31')}>31</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-1')}>01</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-4')}>04</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-7')}>07</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-10')}>10</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-13')}>13</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-16')}>16</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-19')}>19</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-22')}>22</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-25')}>25</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-28')}>28</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-31')}>31</LabeledInput>
                         </View>
                         <View style={styles.column}>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-2')}>02</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-5')}>05</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-8')}>08</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-11')}>11</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-14')}>14</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-17')}>17</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-20')}>20</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-23')}>23</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-26')}>26</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-29')}>29</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-2')}>02</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-5')}>05</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-8')}>08</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-11')}>11</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-14')}>14</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-17')}>17</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-20')}>20</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-23')}>23</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-26')}>26</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-29')}>29</LabeledInput>
                             <View style={styles.space} />
                         </View>
                         <View style={styles.column}>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-3')}>03</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-6')}>06</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-9')}>09</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-12')}>12</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-15')}>15</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-18')}>18</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-21')}>21</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-24')}>24</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-27')}>27</LabeledInput>
-                            <LabeledInput style={{ input: styles.smallInput, ...styles }} onChangeText={updateValues('b-30')}>30</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-3')}>03</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-6')}>06</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-9')}>09</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-12')}>12</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-15')}>15</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-18')}>18</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-21')}>21</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-24')}>24</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-27')}>27</LabeledInput>
+                            <LabeledInput small onChangeText={updateValues('b-30')}>30</LabeledInput>
                             <View style={styles.space} />
                         </View>
                     </View>
                     <View style={dynamicStyles.panelC}>
                         <View style={styles.column}>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-0')}>Janeiro</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-1')}>Fevereiro</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-2')}>Março</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-3')}>Abril</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-4')}>Maio</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-5')}>Junho</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-6')}>Julho</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-7')}>Agosto</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-8')}>Setembro</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-9')}>Outubro</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-10')}>Novembro</LabeledInput>
-                            <LabeledInput style={{ input: styles.bigInput, ...styles }} onChangeText={updateValues('c-11')}>Dezembro</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-0')}>Janeiro</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-1')}>Fevereiro</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-2')}>Março</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-3')}>Abril</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-4')}>Maio</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-5')}>Junho</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-6')}>Julho</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-7')}>Agosto</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-8')}>Setembro</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-9')}>Outubro</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-10')}>Novembro</LabeledInput>
+                            <LabeledInput onChangeText={updateValues('c-11')}>Dezembro</LabeledInput>
                         </View>
                     </View>
                 </View>
