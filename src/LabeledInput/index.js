@@ -36,12 +36,12 @@ const styles = StyleSheet.create({
 
 });
 
-export default ({ children, small, onChangeText }) => {
+export default ({ children, small, value, onChangeText }) => {
     const inputStyle = small ? styles.smallInput : styles.bigInput;
     return (
         <View style={styles.row}>
         <Text style={styles.label}>{children}</Text>
-        <TextInput style={inputStyle} onChangeText={onChangeText} />
+        <TextInput style={inputStyle} value={value && value.toString()} onChangeText={onChangeText} />
         </View>
     );
 }
