@@ -41,7 +41,7 @@ export default ({children, small, value, onChangeText}) => {
       <Text style={styles.label}>{children}</Text>
       <TextInput
         style={inputStyle}
-        value={value && value.toString()}
+        value={value ? value.toString() : ''}
         onChangeText={onChangeText}
         keyboardType="number-pad"
         maxLength={2}
