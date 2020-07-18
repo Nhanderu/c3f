@@ -40,8 +40,14 @@ export default ({ children, small, value, onChangeText }) => {
     const inputStyle = small ? styles.smallInput : styles.bigInput;
     return (
         <View style={styles.row}>
-        <Text style={styles.label}>{children}</Text>
-        <TextInput style={inputStyle} value={value && value.toString()} onChangeText={onChangeText} />
+            <Text style={styles.label}>{children}</Text>
+            <TextInput
+                style={inputStyle}
+                value={value && value.toString()}
+                onChangeText={onChangeText}
+                keyboardType='number-pad'
+                maxLength={2}
+            />
         </View>
     );
 }
