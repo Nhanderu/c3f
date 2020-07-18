@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -142,10 +142,12 @@ export default () => {
         panelC: styles.panel,
     });
 
-    AsyncStorage
-        .getItem(ASYNC_STORAGE_KEY)
-        .catch(e => console.warn(e))
-        .then(raw => raw && setValues(JSON.parse(raw)));
+    useEffect(() => {
+        AsyncStorage
+            .getItem(ASYNC_STORAGE_KEY)
+            .catch(e => console.warn(e))
+            .then(raw => raw && setValues(JSON.parse(raw)))
+    }, []);
 
     const calculate = () => {
 
