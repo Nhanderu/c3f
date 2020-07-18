@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
 
 })
 
-export default () => {;
+export default () => {
 
     let [values, setValues] = useState({});
     const [result, setResult] = useState('');
@@ -145,12 +145,7 @@ export default () => {;
     AsyncStorage
         .getItem(ASYNC_STORAGE_KEY)
         .catch(e => console.warn(e))
-        .then(raw => {
-            if (raw) {
-                values = JSON.parse(raw);
-                setValues(values);
-            }
-        });
+        .then(raw => raw && setValues(JSON.parse(raw)));
 
     const calculate = () => {
 
