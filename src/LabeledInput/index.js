@@ -34,14 +34,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ({children, small, value, onChangeText}) => {
-  const inputStyle = small ? styles.smallInput : styles.bigInput;
+export default ({children, small, defaultValue, onChangeText}) => {
   return (
     <View style={styles.row}>
       <Text style={styles.label}>{children}</Text>
       <TextInput
-        style={inputStyle}
-        value={value ? value.toString() : ''}
+        style={small ? styles.smallInput : styles.bigInput}
+        defaultValue={defaultValue ? defaultValue.toString() : ''}
         onChangeText={onChangeText}
         keyboardType="number-pad"
         maxLength={2}
