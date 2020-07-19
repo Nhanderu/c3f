@@ -16,6 +16,7 @@ export default StyleSheet.create({
 
   bigInput: {
     width: 100,
+    padding: 0,
     backgroundColor: 'white',
     borderWidth: 1,
     borderColor: 'white',
@@ -25,6 +26,7 @@ export default StyleSheet.create({
 
   smallInput: {
     width: 50,
+    padding: 0,
     backgroundColor: 'white',
     borderWidth: 1,
     borderColor: 'white',

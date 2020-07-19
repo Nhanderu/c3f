@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, TextInput} from 'react-native';
+import {ScrollView, View, Text, TextInput} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import LabeledInput from '../LabeledInput';
@@ -75,7 +75,7 @@ export default () => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.calculator}>
         <View style={styles.space} />
         <View style={styles.inputArea}>
@@ -407,6 +407,6 @@ export default () => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };

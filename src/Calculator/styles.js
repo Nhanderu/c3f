@@ -29,6 +29,7 @@ export default StyleSheet.create({
 
   dInput: {
     width: 120,
+    padding: 0,
     backgroundColor: 'white',
     borderWidth: 1,
     borderColor: 'white',
