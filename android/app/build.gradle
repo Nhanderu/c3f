@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.carroforte"
+        applicationId "com.c3f"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

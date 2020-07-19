@@ -1,5 +1,5 @@
 {
-  "name": "carro-forte",
+  "name": "c3f",
   "version": "0.3.1",
   "private": true,
   "scripts": {
@@ -26,6 +26,8 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": ["./scripts/jest-setup.js"]
+    "setupFiles": [
+      "./scripts/jest-setup.js"
+    ]
   }
 }

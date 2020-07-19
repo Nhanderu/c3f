@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.carroforte">
+  package="com.c3f">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

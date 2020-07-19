@@ -1,4 +1,6 @@
 import {AppRegistry} from 'react-native';
 import Calculator from './src/Calculator';
 
-AppRegistry.registerComponent('carroforte', () => Calculator);
+import {name} from './package';
+
+AppRegistry.registerComponent(name, () => Calculator);
