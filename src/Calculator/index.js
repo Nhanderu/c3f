@@ -51,12 +51,10 @@ export default () => {
     newValues[id] = parseInt(value, 10);
 
     setValues(newValues);
-
-    try {
-      await AsyncStorage.setItem(ASYNC_STORAGE_KEY, JSON.stringify(newValues));
-    } catch (e) {
-      console.warn(e);
-    }
+    await AsyncStorage.setItem(
+      ASYNC_STORAGE_KEY,
+      JSON.stringify(newValues),
+    ).catch((e) => console.warn(e));
   };
 
   const changePanel = (id) => () => {
