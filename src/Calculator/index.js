@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
 });
 
 export default () => {
-  let [values, setValues] = useState({});
+  const [values, setValues] = useState({});
   const [result, setResult] = useState('');
   const [dynamicStyles, setDynamicStyles] = useState({
     buttonA: styles.panelButtonActive,
@@ -164,8 +164,8 @@ export default () => {
   };
 
   const updateValues = (id) => async (value) => {
-    const newValues = values || {};
-    newValues[id] = parseInt(value.substr(-4), 10);
+    const newValues = values;
+    newValues[id] = parseInt(value, 10);
 
     setValues(newValues);
 
