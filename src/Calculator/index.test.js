@@ -5,5 +5,5 @@ import renderer from 'react-test-renderer';
 import Calculator from '.';
 
 it('renders correctly', () => {
-  renderer.create(<Calculator />);
+  renderer.create(<Calculator skipStorage />);
 });

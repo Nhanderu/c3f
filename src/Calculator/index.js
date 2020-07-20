@@ -7,9 +7,9 @@ import Button from '../Button';
 
 import styles from './styles';
 
-const ASYNC_STORAGE_KEY = 'values';
+const STORAGE_KEY = 'values';
 
-export default () => {
+export default ({skipStorage}) => {
   const [values, setValues] = useState({});
   const [result, setResult] = useState('');
   const [dynamicStyles, setDynamicStyles] = useState({
@@ -22,10 +22,12 @@ export default () => {
   });
 
   useEffect(() => {
-    AsyncStorage.getItem(ASYNC_STORAGE_KEY)
-      .catch((e) => console.warn(e))
-      .then((raw) => raw && setValues(JSON.parse(raw)));
-  }, []);
+    if (!skipStorage) {
+      AsyncStorage.getItem(STORAGE_KEY)
+        .catch(console.warn)
+        .then((raw) => raw && setValues(JSON.parse(raw)));
+    }
+  }, [skipStorage]);
 
   const calculate = () => {
     const now = new Date();
@@ -51,10 +53,12 @@ export default () => {
     newValues[id] = parseInt(value, 10);
 
     setValues(newValues);
-    await AsyncStorage.setItem(
-      ASYNC_STORAGE_KEY,
-      JSON.stringify(newValues),
-    ).catch((e) => console.warn(e));
+
+    if (!skipStorage) {
+      await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newValues)).catch(
+        console.warn,
+      );
+    }
   };
 
   const changePanel = (id) => () => {
