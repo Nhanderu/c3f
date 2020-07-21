@@ -60,51 +60,18 @@ export default StyleSheet.create({
 
   valuesArea: {
     flex: 4,
-    alignSelf: 'stretch',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
     backgroundColor: '#222',
   },
 
-  panelsMenu: {
-    flex: 1,
-    alignSelf: 'stretch',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-  },
-
-  panelButton: {
-    height: 30,
-    width: 50,
+  paginationDot: {
     backgroundColor: 'black',
-    fontSize: 20,
-    color: 'white',
-    textAlign: 'center',
-    textAlignVertical: 'center',
   },
 
-  panelButtonActive: {
-    height: 30,
-    width: 50,
+  activePaginationDot: {
     backgroundColor: '#ee6',
-    fontSize: 20,
-    color: 'black',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-  },
-
-  panelsArea: {
-    flex: 9,
-    alignSelf: 'stretch',
   },
 
   panel: {
-    display: 'none',
-  },
-
-  panelActive: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
