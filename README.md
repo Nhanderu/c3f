@@ -10,14 +10,6 @@ Since I wanted to study React Native and ReasonML, I began this toy project. Two
 
 The icon was make by [Freepik][1] from [Flaticon][2] and it was edited with the help of [MakeAppIcon][3].
 
-## Roadmap
-
-- [x] `v0.1.0`: working version as a React web app
-- [x] `v0.2.0`: working version as a React Native mobile app
-- [x] `v0.3.0`: locally persisting values feature
-- [ ] `v1.0.0`: refactor, test, build and ship for both platforms
-- [ ] `v1.0.1`: use ReasonML
-
 ## License
 
 This project code is in the public domain. See the [LICENSE file][3].
