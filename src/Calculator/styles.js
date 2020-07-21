@@ -85,4 +85,16 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 25,
   },
+
+  errorInput: {
+    borderColor: 'red',
+    elevation: 10,
+    shadowColor: 'red',
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+  },
 });
