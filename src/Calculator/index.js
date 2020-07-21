@@ -25,6 +25,8 @@ export default ({skipStorage}) => {
     }
   }, [skipStorage]);
 
+  const validateAllFields = () => setDynamicStyles({});
+
   const invalidateFields = (fields) => {
     const newDynamicStyles = {};
     for (const field of fields) {
@@ -34,6 +36,8 @@ export default ({skipStorage}) => {
   };
 
   const calculate = () => {
+    validateAllFields();
+
     const now = new Date();
     const day = now.getDay();
     const date = now.getDate();
