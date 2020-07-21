@@ -12,9 +12,9 @@ The icon was make by [Freepik][1] from [Flaticon][2] and it was edited with the 
 
 ## License
 
-This project code is in the public domain. See the [LICENSE file][3].
+This project code is in the public domain. See the [LICENSE file][4].
 
 [1]: https://www.flaticon.com/authors/freepik
 [2]: https://www.flaticon.com/free-icon/automobile_1785810
 [3]: https://makeappicon.com
-[3]: https://github.com/Nhanderu/c3f/blob/master/LICENSE
+[4]: https://github.com/Nhanderu/c3f/blob/master/LICENSE
