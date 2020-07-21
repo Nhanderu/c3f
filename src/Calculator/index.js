@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {View, Text, TextInput} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Swiper from 'react-native-swiper';
@@ -14,6 +14,8 @@ export default ({skipStorage}) => {
   const [values, setValues] = useState({});
   const [result, setResult] = useState('');
 
+  const swiper = useRef(null);
+
   useEffect(() => {
     if (!skipStorage) {
       AsyncStorage.getItem(STORAGE_KEY)
@@ -28,10 +30,34 @@ export default ({skipStorage}) => {
     const date = now.getDate();
     const month = now.getMonth();
 
-    const a = values[`a${day}`];
-    const b = values[`b${date}`];
-    const c = values[`c${month}`];
-    const d = values.d;
+    let field;
+
+    field = `a${day}`;
+    const a = values[field];
+    if (!a) {
+      swiper.current.scrollTo(1);
+      return;
+    }
+
+    field = `b${date}`;
+    const b = values[field];
+    if (!b) {
+      swiper.current.scrollTo(2);
+      return;
+    }
+
+    field = `c${month}`;
+    const c = values[field];
+    if (!c) {
+      swiper.current.scrollTo(3);
+      return;
+    }
+
+    field = 'd';
+    const d = values[field];
+    if (!d) {
+      return;
+    }
 
     let newResult = a + b + c + d;
     if (isNaN(newResult)) {
@@ -73,6 +99,7 @@ export default ({skipStorage}) => {
         </View>
       </View>
       <Swiper
+        ref={swiper}
         containerStyle={styles.valuesArea}
         dotStyle={styles.paginationDot}
         activeDotStyle={styles.activePaginationDot}>
