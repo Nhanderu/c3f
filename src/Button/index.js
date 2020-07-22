@@ -5,7 +5,7 @@ export default ({ children, style, onPress }) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress}>
-        <Text style={style}>{children}</Text>
+        <Text style={style} accessibilityRole='button'>{children}</Text>
       </TouchableOpacity>
     </View>
   )

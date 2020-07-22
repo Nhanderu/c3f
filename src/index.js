@@ -1,11 +1,12 @@
 import 'react-native-gesture-handler'
 import React from 'react'
-import { StatusBar, Button } from 'react-native'
+import { StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Calculator from './Calculator'
 import InformationScreen from './InformationScreen'
+import Button from './Button'
 import resources from './resources'
 import styles from './styles'
 
@@ -27,9 +28,10 @@ export default () => {
               headerRight: () => (
                 <Button
                   onPress={() => navigation.navigate(resources.pages.informationScreen)}
-                  color={resources.colors.black}
-                  title="Info"
-                />
+                  style={styles.infoButton}
+                >
+                  Info
+                </Button>
               )
             })}
           />

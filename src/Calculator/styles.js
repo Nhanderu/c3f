@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet } from 'react-native'
 
 import { colors } from '../resources'
 
@@ -15,10 +15,6 @@ export default StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     backgroundColor: colors.yellow
-  },
-
-  space: {
-    flex: 1
   },
 
   inputArea: {
@@ -61,7 +57,7 @@ export default StyleSheet.create({
   },
 
   valuesArea: {
-    flex: 4,
+    flex: 6,
     backgroundColor: colors.lightBlack
   },
 
@@ -86,6 +82,10 @@ export default StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     marginHorizontal: 25
+  },
+
+  space: {
+    flex: 1
   },
 
   errorInput: {
