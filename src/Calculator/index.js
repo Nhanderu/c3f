@@ -93,7 +93,11 @@ export default ({ skipStorage }) => {
         setValues(newValues);
 
         if (!skipStorage) {
-            const json = JSON.stringify(newValues);
+            const storedValues = {};
+            for (const k in newValues)
+                if (k !== 'd') storedValues[k] = newValues[k];
+
+            const json = JSON.stringify(storedValues);
             await AsyncStorage.setItem(STORAGE_KEY, json).catch(console.warn);
         }
     };
