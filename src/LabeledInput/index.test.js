@@ -1,9 +1,11 @@
-import 'react-native';
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* eslint-env jest */
 
-import LabeledInput from '.';
+import 'react-native'
+import React from 'react'
+import renderer from 'react-test-renderer'
+
+import LabeledInput from '.'
 
 it('renders correctly', () => {
-    renderer.create(<LabeledInput />);
-});
+  renderer.create(<LabeledInput />)
+})

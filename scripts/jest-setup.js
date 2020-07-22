@@ -1,7 +1,5 @@
-import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock';
+/* eslint-env jest */
 
-/* eslint-disable no-undef */
+import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock'
 
-jest.mock('@react-native-community/async-storage', () => mockAsyncStorage);
-
-/* eslint-enable no-undef */
+jest.mock('@react-native-community/async-storage', () => mockAsyncStorage)

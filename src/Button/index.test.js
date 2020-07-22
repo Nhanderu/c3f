@@ -1,9 +1,11 @@
-import 'react-native';
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* eslint-env jest */
 
-import Button from '.';
+import 'react-native'
+import React from 'react'
+import renderer from 'react-test-renderer'
+
+import Button from '.'
 
 it('renders correctly', () => {
-    renderer.create(<Button />);
-});
+  renderer.create(<Button />)
+})

@@ -1,9 +1,11 @@
-import 'react-native';
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* eslint-env jest */
 
-import Calculator from '.';
+import 'react-native'
+import React from 'react'
+import renderer from 'react-test-renderer'
+
+import Calculator from '.'
 
 it('renders correctly', () => {
-    renderer.create(<Calculator skipStorage />);
-});
+  renderer.create(<Calculator skipStorage />)
+})
