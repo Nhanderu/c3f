@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { View, Text, TextInput } from 'react-native'
+import { View, Text, TextInput, StatusBar } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage'
 import Swiper from 'react-native-swiper'
 
 import LabeledInput from '../LabeledInput'
 import Button from '../Button'
-
+import colors from '../colors'
 import styles from './styles'
 
 const STORAGE_KEY = 'values'
@@ -25,8 +25,6 @@ export default ({ skipStorage }) => {
     }
   }, [skipStorage])
 
-  const validateAllFields = () => setDynamicStyles({})
-
   const invalidateFields = fields => {
     const newDynamicStyles = {}
     for (const field of fields) newDynamicStyles[field] = styles.errorInput
@@ -35,7 +33,7 @@ export default ({ skipStorage }) => {
   }
 
   const calculate = () => {
-    validateAllFields()
+    setDynamicStyles({})
 
     const now = new Date()
     const day = now.getDay()
@@ -43,7 +41,7 @@ export default ({ skipStorage }) => {
     const month = now.getMonth()
 
     let field
-    let firstErrorPanel = 0
+    let firstErrorPanel
     const invalidFields = []
     let error = false
 
@@ -79,13 +77,12 @@ export default ({ skipStorage }) => {
     }
 
     if (error) {
-      firstErrorPanel && swiper.current.scrollTo(firstErrorPanel)
+      if (firstErrorPanel) swiper.current.scrollTo(firstErrorPanel)
       invalidateFields(invalidFields)
       return
     }
 
-    const newResult = a + b + c + d
-    setResult(newResult)
+    setResult(a + b + c + d)
   }
 
   const updateValues = id => async value => {
@@ -100,7 +97,8 @@ export default ({ skipStorage }) => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} emulateUnlessSupported={false}>
+      <StatusBar backgroundColor={colors.yellow} barStyle='dark-content' />
       <View style={styles.calculator}>
         <View style={styles.space} />
         <View style={styles.inputArea}>
@@ -113,6 +111,9 @@ export default ({ skipStorage }) => {
           <Button style={styles.calculate} onPress={calculate}>
             Calcular
           </Button>
+          <Text style={styles.informationButton} accessibilityRole='button'>
+            i
+          </Text>
         </View>
         <View style={styles.resultArea}>
           <Text style={styles.result}>{result}</Text>

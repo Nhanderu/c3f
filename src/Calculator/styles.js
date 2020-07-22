@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
+
+import colors from '../colors'
 
 export default StyleSheet.create({
   container: {
@@ -12,7 +14,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    backgroundColor: '#ee6'
+    backgroundColor: colors.yellow
   },
 
   space: {
@@ -30,20 +32,36 @@ export default StyleSheet.create({
   dInput: {
     width: 120,
     padding: 0,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: colors.white,
     fontSize: 20,
     textAlign: 'center'
   },
 
   calculate: {
     width: 120,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: colors.white,
     fontSize: 20,
     textAlign: 'center'
+  },
+
+  informationButton: {
+    position: 'absolute',
+    right: 25,
+    top: Platform.OS === 'ios' ? -15 : -30,
+    width: 20,
+    height: 20,
+    paddingTop: Platform.OS === 'ios' ? 1 : 0,
+    borderWidth: 2,
+    borderColor: colors.black,
+    borderRadius: 10,
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+    fontSize: 15,
+    fontWeight: '700'
   },
 
   resultArea: {
@@ -60,15 +78,15 @@ export default StyleSheet.create({
 
   valuesArea: {
     flex: 4,
-    backgroundColor: '#222'
+    backgroundColor: colors.lightBlack
   },
 
   paginationDot: {
-    backgroundColor: 'black'
+    backgroundColor: colors.black
   },
 
   activePaginationDot: {
-    backgroundColor: '#ee6'
+    backgroundColor: colors.yellow
   },
 
   panel: {
@@ -87,9 +105,9 @@ export default StyleSheet.create({
   },
 
   errorInput: {
-    borderColor: 'red',
+    borderColor: colors.red,
     elevation: 10,
-    shadowColor: 'red',
+    shadowColor: colors.red,
     shadowOpacity: 0.34,
     shadowRadius: 6.27,
     shadowOffset: {
