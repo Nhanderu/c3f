@@ -1,6 +1,6 @@
 import { StyleSheet, Platform } from 'react-native'
 
-import colors from '../colors'
+import { colors } from '../resources'
 
 export default StyleSheet.create({
   container: {
@@ -46,22 +46,6 @@ export default StyleSheet.create({
     borderColor: colors.white,
     fontSize: 20,
     textAlign: 'center'
-  },
-
-  informationButton: {
-    position: 'absolute',
-    right: 25,
-    top: Platform.OS === 'ios' ? -15 : -30,
-    width: 20,
-    height: 20,
-    paddingTop: Platform.OS === 'ios' ? 1 : 0,
-    borderWidth: 2,
-    borderColor: colors.black,
-    borderRadius: 10,
-    textAlign: 'center',
-    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
-    fontSize: 15,
-    fontWeight: '700'
   },
 
   resultArea: {

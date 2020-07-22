@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { View, Text, TextInput, StatusBar } from 'react-native'
+import { View, Text, TextInput } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage'
 import Swiper from 'react-native-swiper'
 
 import LabeledInput from '../LabeledInput'
 import Button from '../Button'
-import colors from '../colors'
 import styles from './styles'
 
 const STORAGE_KEY = 'values'
@@ -98,9 +97,7 @@ export default ({ skipStorage }) => {
 
   return (
     <View style={styles.container} emulateUnlessSupported={false}>
-      <StatusBar backgroundColor={colors.yellow} barStyle='dark-content' />
       <View style={styles.calculator}>
-        <View style={styles.space} />
         <View style={styles.inputArea}>
           <TextInput
             style={[styles.dInput, dynamicStyles.d]}
@@ -111,9 +108,6 @@ export default ({ skipStorage }) => {
           <Button style={styles.calculate} onPress={calculate}>
             Calcular
           </Button>
-          <Text style={styles.informationButton} accessibilityRole='button'>
-            i
-          </Text>
         </View>
         <View style={styles.resultArea}>
           <Text style={styles.result}>{result}</Text>

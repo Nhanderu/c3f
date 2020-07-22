@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "calculator": "calculator",
+    "informationScreen": "information-screen"
+  },
+  "colors": {
+    "black": "black",
+    "lightBlack": "#222",
+    "red": "red",
+    "white": "white",
+    "yellow": "#ee6"
+  }
+}
