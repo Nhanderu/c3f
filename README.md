@@ -8,7 +8,7 @@ Since I wanted to study React Native and ReasonML, I began this toy project. Two
 
 ## Logo
 
-![Made with MakeAppIcon and Flaticon](./static/images/logo.png)
+![Made with MakeAppIcon and Flaticon](./static/images/logo-circle-96.png)
 
 The icon was make by [Freepik][1] from [Flaticon][2] and it was edited with the help of [MakeAppIcon][3].
 
