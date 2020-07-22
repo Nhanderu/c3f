@@ -5,5 +5,5 @@ import renderer from 'react-test-renderer';
 import LabeledInput from '.';
 
 it('renders correctly', () => {
-  renderer.create(<LabeledInput />);
+    renderer.create(<LabeledInput />);
 });

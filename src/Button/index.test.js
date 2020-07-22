@@ -5,5 +5,5 @@ import renderer from 'react-test-renderer';
 import Button from '.';
 
 it('renders correctly', () => {
-  renderer.create(<Button />);
+    renderer.create(<Button />);
 });

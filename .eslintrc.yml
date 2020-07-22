@@ -1,0 +1,12 @@
+extends: '@react-native-community'
+rules:
+  curly:
+    - 'error'
+    - 'multi'
+  arrow-parens:
+    - 'error'
+    - 'as-needed'
+  jsx-quotes:
+    - 'error'
+    - 'prefer-single'
+  no-lonely-if: 'error'
