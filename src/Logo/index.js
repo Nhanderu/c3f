@@ -2,9 +2,9 @@ import React from 'react'
 import { View } from 'react-native'
 import Svg, { Path } from 'react-native-svg'
 
-export default ({ style }) => {
+export default () => {
   return (
-    <View style={style}>
+    <View>
       <Svg width='200' height='200' viewBox='0 0 200 200'>
         <Path
           fill='black'

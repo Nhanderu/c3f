@@ -14,7 +14,6 @@ import styles from './styles'
 const { Navigator, Screen } = createStackNavigator()
 
 export default () => {
-
   useEffect(() => {
     SplashScreen.hide()
   }, [SplashScreen])

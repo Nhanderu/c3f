@@ -9,7 +9,7 @@ export default () => {
   return (
     <View style={styles.container}>
       <View style={styles.div}>
-        <Logo style={styles.logo} />
+        <Logo />
         <Text style={styles.text}>
           Este ícone foi feito por <A style={styles.link} href='https://www.flaticon.com/authors/freepik'>Freepik</A> da <A style={styles.link} href='https://www.flaticon.com/free-icon/automobile_1785810'>Flaticon</A>.
           Foi editado com <A style={styles.link} href='https://svg-edit.github.io/svgedit/'>SVG Editor</A> e formatado com <A style={styles.link} href='https://makeappicon.com'>MakeAppIcon</A> e <A style={styles.link} href='https://apetools.webprofusion.com/#/tools/imagegorilla'>Gorilla Image</A>.
@@ -24,7 +24,7 @@ export default () => {
       <View style={styles.line} />
       <View style={styles.div}>
         <Text style={styles.text}>
-          bilili bololó
+          Ao utilizar o aplicativo C3F, o usuário concorda em se responsabilizar pelos dados inseridos e pelo uso da plataforma.
         </Text>
       </View>
     </View>

@@ -10,10 +10,6 @@ export default StyleSheet.create({
     padding: 30
   },
 
-  logo: {
-    height: 160
-  },
-
   div: {
     alignItems: 'center'
   },
@@ -24,14 +20,13 @@ export default StyleSheet.create({
   },
 
   link: {
-    color: 'blue',
     textDecorationLine: 'underline'
   },
 
   line: {
     marginTop: 50,
     marginBottom: 50,
-    borderBottomColor: 'black',
+    borderBottomColor: colors.black,
     borderBottomWidth: 1
   }
 })
