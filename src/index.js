@@ -1,8 +1,9 @@
 import 'react-native-gesture-handler'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+import SplashScreen from 'react-native-splash-screen'
 
 import Calculator from './Calculator'
 import InformationScreen from './InformationScreen'
@@ -13,6 +14,11 @@ import styles from './styles'
 const { Navigator, Screen } = createStackNavigator()
 
 export default () => {
+
+  useEffect(() => {
+    SplashScreen.hide()
+  }, [SplashScreen])
+
   return (
     <>
       <StatusBar backgroundColor={resources.colors.yellow} barStyle='dark-content' />
