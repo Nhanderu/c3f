@@ -12,7 +12,7 @@ export default () => {
         <Logo />
         <Text style={styles.text}>
           Este ícone foi feito por <A style={styles.link} href='https://www.flaticon.com/authors/freepik'>Freepik</A> da <A style={styles.link} href='https://www.flaticon.com/free-icon/automobile_1785810'>Flaticon</A>.
-          Foi editado com <A style={styles.link} href='https://svg-edit.github.io/svgedit/'>SVG Editor</A> e formatado com <A style={styles.link} href='https://makeappicon.com'>MakeAppIcon</A> e <A style={styles.link} href='https://apetools.webprofusion.com/#/tools/imagegorilla'>Gorilla Image</A>.
+          Foi editado com <A style={styles.link} href='https://svg-edit.github.io/svgedit/'>SVG Editor</A> e formatado com <A style={styles.link} href='https://makeappicon.com'>MakeAppIcon</A>, <A style={styles.link} href='https://apetools.webprofusion.com/#/tools/imagegorilla'>Gorilla Image</A> e <A style={styles.link} href='https://www.norio.be/graphic-generator'>Graphic Generator</A>.
         </Text>
       </View>
       <View style={styles.line} />

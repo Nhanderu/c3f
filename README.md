@@ -12,11 +12,11 @@ Since I wanted to study React Native and ReasonML, I began this toy project. Two
 
 The icon was make by [Freepik][1] from [Flaticon][2].
 
-It was edited with [SVG Editor][3] and formatted with [MakeAppIcon][4] and [Gorilla Image][5].
+It was edited with [SVG Editor][3] and formatted with [MakeAppIcon][4], [Gorilla Image][5] and [Graphic Generator][6].
 
 ## License
 
-This project code is in the public domain. See the [LICENSE file][6].
+This project code is in the public domain. See the [LICENSE file][7].
 
 [badge-1-img]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [badge-1-link]: https://standardjs.com
@@ -26,4 +26,5 @@ This project code is in the public domain. See the [LICENSE file][6].
 [3]: https://svg-edit.github.io/svgedit/
 [4]: https://makeappicon.com
 [5]: https://apetools.webprofusion.com/#/tools/imagegorilla
-[6]: https://github.com/Nhanderu/c3f/blob/master/LICENSE
+[6]: https://www.norio.be/graphic-generator
+[7]: https://github.com/Nhanderu/c3f/blob/master/LICENSE
