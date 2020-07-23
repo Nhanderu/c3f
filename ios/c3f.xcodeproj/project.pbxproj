@@ -194,7 +194,6 @@
 				84B61CE6DC59548A5FC408E4 /* Pods-c3f-tvOSTests.debug.xcconfig */,
 				077C9C0247028E8BEFF16C83 /* Pods-c3f-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
