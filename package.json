@@ -1,6 +1,6 @@
 {
   "name": "c3f",
-  "version": "0.3.8",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
