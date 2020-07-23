@@ -11,7 +11,8 @@ export default () => {
       <View style={styles.div}>
         <Logo style={styles.logo} />
         <Text style={styles.text}>
-          Este ícone foi feito por <A style={styles.link} href='https://www.flaticon.com/authors/freepik'>Freepik</A> da <A style={styles.link} href='https://www.flaticon.com/free-icon/automobile_1785810'>Flaticon</A> e foi editado com a ajuda do <A style={styles.link} href='https://makeappicon.com'>MakeAppIcon</A>.
+          Este ícone foi feito por <A style={styles.link} href='https://www.flaticon.com/authors/freepik'>Freepik</A> da <A style={styles.link} href='https://www.flaticon.com/free-icon/automobile_1785810'>Flaticon</A>.
+          Foi editado com <A style={styles.link} href='https://svg-edit.github.io/svgedit/'>SVG Editor</A> e formatado com <A style={styles.link} href='https://makeappicon.com'>MakeAppIcon</A> e <A style={styles.link} href='https://apetools.webprofusion.com/#/tools/imagegorilla'>Gorilla Image</A>.
         </Text>
       </View>
       <View style={styles.line} />
