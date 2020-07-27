@@ -4,11 +4,17 @@
 
 This app idea was my mom's. Briefly, it helps her with some repetitive calculations.
 
-Since I wanted to study React Native and ReasonML, I began this toy project. Two birds with one stone.
+## Install
+
+<a href="https://play.google.com/store/apps/details?id=com.c3f">
+    <img width="200" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Play Store" title="Play Store">
+</a>
+
+## Example
+
+<img height="700" src="./static/examples/android.gif" alt="Example Android" title="Example Android">
 
 ## Logo
-
-![Made with MakeAppIcon and Flaticon](./static/images/logo-circle-96.png)
 
 The icon was make by [Freepik][1] from [Flaticon][2].
 
