@@ -5,9 +5,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import SplashScreen from 'react-native-splash-screen'
 
-import Calculator from './Calculator'
-import InformationScreen from './InformationScreen'
-import Button from './Button'
+import Calculator from './components/Calculator'
+import InformationScreen from './components/InformationScreen'
+import Button from './helpers/Button'
 import resources from './resources'
 import styles from './styles'
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import Link from '../Link'
-import Logo from '../Logo'
+import Link from '../../helpers/Link'
+import Logo from '../../helpers/Logo'
 import styles from './styles'
 
 export default () => {

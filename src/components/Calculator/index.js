@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import Swiper from 'react-native-swiper'
 
 import LabeledInput from '../LabeledInput'
-import Button from '../Button'
+import Button from '../../helpers/Button'
 import styles from './styles'
 
 const STORAGE_KEY = 'values'
