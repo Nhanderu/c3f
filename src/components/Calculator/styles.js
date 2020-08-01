@@ -52,7 +52,7 @@ export default StyleSheet.create({
   },
 
   result: {
-    fontSize: 40,
+    fontSize: 30,
     textAlign: 'center'
   },
 

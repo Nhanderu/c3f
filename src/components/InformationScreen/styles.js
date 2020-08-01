@@ -24,8 +24,8 @@ export default StyleSheet.create({
   },
 
   line: {
-    marginTop: 50,
-    marginBottom: 50,
+    marginTop: 25,
+    marginBottom: 25,
     borderBottomColor: colors.black,
     borderBottomWidth: 1
   }
