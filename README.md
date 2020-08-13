@@ -36,9 +36,9 @@ This project code is in the public domain. See the [LICENSE file][7].
 
 ### Contribution
 
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you shall be in the public domain, without any
-additional terms or conditions.
+Unless you explicitly state otherwise, any contribution intentionally
+submitted for inclusion in the work by you shall be in the public
+domain, without any additional terms or conditions.
 
 [1]: https://www.flaticon.com/authors/freepik
 [2]: https://www.flaticon.com/free-icon/automobile_1785810
